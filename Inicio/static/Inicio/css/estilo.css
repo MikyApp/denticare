@@ -1,0 +1,544 @@
+/* Colores */
+:root {
+    --primary-blue: #e8f6f9;
+    --primary-purple: #00a0e6;
+}
+
+body {
+    background-color: var(--primary-blue);
+    overflow-x: hidden;
+}
+
+.care1{
+    color: var(--primary-purple);
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.care{
+    color: #0080b8;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.text-decoration-none:hover{
+    color: #0080b8;
+    font-weight: bold;
+
+}
+
+.row {
+    margin-bottom: 10px;
+}
+
+h2 {
+    padding-top: 60px;
+}
+
+
+/*Busqueda*/
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-right: -50px;
+    padding-left: -50px;
+}
+
+.search-input {
+    flex: 1;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.search-button:hover {
+    background-color: white;
+    border-radius: 50%;
+    
+}
+
+.search-button svg {
+    color: #666;
+    margin-left: -60px;
+}
+
+.search-button:hover svg {
+    color: var(--primary-purple);
+}
+
+
+.btncontact {
+color: white;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-purple);
+    font-size: 19px;
+}
+
+.navbar-expand-lg {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.icon-class {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+
+
+.navbar-brand img {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.search-bar {
+    flex-grow: 1;
+    max-width: 400px;
+    width: 100%;
+}
+
+.search-input {
+    border-radius: 25px;
+    border: 2px solid var(--primary-purple);
+    padding-left: 30px;
+}
+
+.contact-btn {
+    background-color: var(--primary-purple);
+    border-radius: 10px;
+    padding: 8px 20px;
+}
+
+.contact-btn:hover{
+    background-color: #0088cc;
+}
+
+/* Sección información cards */
+h1,h2, h3,h5 {
+    color: var(--primary-purple);
+}
+
+.hero-section {
+    position: relative;
+    padding: 100px 0;
+}
+
+.hero-title {
+    color: var(--primary-purple);
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.buy-now-btn {
+    background-color: white;
+    color: var(--primary-purple);
+    border-radius: 25px;
+    padding: 12px 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.purple-circle {
+    background-color: var(--primary-purple);
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 10px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.info-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #f0f0ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.cart-badge {
+    background-color: var(--primary-purple);
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+/* Nuevos Productos */
+.product-title {
+    color: #666;
+    font-size: 1rem;
+    min-height: 2.4rem;
+}
+
+.products-grid {
+    background-color: white !important;
+    margin-top: -150px;
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.btn-light {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+}
+
+.price {
+    color: var(--primary-purple);
+}
+
+/*Servicios*/
+
+.text-purple {
+    color: var(--primary-purple);
+}
+
+.blog-section {
+    background-color: #e8f6f9;
+    margin-top: -40px;
+}
+
+.featured-post img {
+    transition: transform 0.3s ease;
+}
+
+.featured-post:hover img {
+    transform: scale(1.02);
+}
+
+
+/*Pie de página o footer*/
+footer .text-primary {
+    color: #0088cc !important;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
+
+
+/*Información del producto*/
+.thumbnail-img {
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.thumbnail-img:hover {
+    border-color: var(--primary-purple) !important;
+}
+
+.main-image img {
+    transition: transform 0.3s;
+}
+
+.main-image:hover img {
+    transform: scale(1.05);
+}
+
+.specifications .row:hover {
+    background-color: #f8f9fa;
+}
+
+.product-detail {
+    background-color: white !important;
+    margin-top: 60px;
+}
+
+/*Html productos, banner y productos*/
+.text-purple {
+    color: var(--primary-purple);
+}
+
+.productos-grid {
+    margin-top: -50px;
+    background-color: white !important;
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.banner {
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.banner img {
+    transition: transform 0.3s;
+}
+
+.banner:hover img {
+    transform: scale(1.05);
+}
+
+.btn-light {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body .row {
+    flex-grow: 1;
+}
+
+/*Formulario de contactos*/
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem var(--primary-purple);
+    border-color: white;
+}
+
+.btn-lg{
+    background-color: var(--primary-purple);
+    color: white;
+}
+
+.btn-lg:hover {
+    color: white;
+    background-color: #0080b8;
+}
+
+.form-control::placeholder {
+    color: #6c757d;
+    opacity: 0.8;
+}
+
+.form-control {
+    transition: all 0.3s ease;
+}
+
+.form-control:hover {
+    background-color: rgb(255, 255, 255) !important;
+}
+
+.contact-section {
+    margin-top: -80px;
+}
+.justify-content-center{
+    margin-top: -40px;
+}
+
+
+/*Productos del html productos*/
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.product-title {
+    color: #666;
+    min-height: 2.4rem;
+}
+
+.btn-light {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+}
+
+.btn-light:hover {
+    background-color: #e9ecef;
+}
+
+.products-section {
+    margin-top: -50px;
+    background-color: white !important;
+}
+
+/*Carrito de compras*/
+.fw-bold{
+    color: var(--primary-purple);
+}
+.cart-item {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #f8f9fa;
+}
+
+.cart-item:hover {
+    background-color: #f0f0f0;
+}
+
+.btn-close:focus {
+    box-shadow: none;
+}
+
+.offcanvas-backdrop.show {
+    opacity: 0.3;
+}
+
+
+/*Formulario login-iniciar sesión*/
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem var(--primary-purple);
+    border-color: var(--primary-purple);
+}
+
+.form-control {
+    transition: all 0.3s ease;
+}
+
+.form-control:hover {
+    background-color: #f8f9fa !important;
+}
+
+.btn-close:focus {
+    box-shadow: none;
+}
+
+.modal-content {
+    border: none;
+}
+
+/*Formulario registrarse*/
+.form-control:focus {
+    box-shadow: 0 0 0 0.20rem var(--primary-purple);
+    border-color: var(--primary-purple);
+}
+
+.form-control {
+    transition: all 0.3s ease;
+}
+
+.form-control:hover {
+    background-color: #f8f9fa !important;
+}
+
+.btn-close:focus {
+    box-shadow: none;
+}
+
+.modal-content {
+    border: none;
+}
+
+/*Formulario de pagos*/
+label{
+    color: var(--primary-purple);
+}
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 0.10rem var(--primary-purple);
+    border-color: var(--primary-purple);
+    background-color: white;
+}
+
+.form-control::placeholder,
+.form-select {
+    color: #6c757d;
+    opacity: 0.8;
+}
+
+.form-control,
+.form-select {
+    transition: all 0.3s ease;
+}
+
+.form-control:hover,
+.form-select:hover {
+    background-color: white !important;
+}
+
+.checkout-section {
+    margin-top: 50px;
+}
+
+.input-group-text {
+    background-color: white;
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-purple);
+    border-color: var(--primary-purple);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: wrap;
+    }
+
+    .search-bar {
+        order: 3;
+        margin: 20px 0;
+        max-width: 100%;
+    }
+
+    nav {
+        order: 2;
+    }
+}

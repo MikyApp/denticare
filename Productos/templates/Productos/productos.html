@@ -1,0 +1,117 @@
+{% extends "Inicio/base.html" %}
+
+{% load static %}
+
+<!--Contendo-->
+{% block content%}
+<!-- Banner -->
+<div class="banner position-relative mb-5">
+    <img src="{% static 'inicio/img/porta_preview_rev_1.png' %}" alt="Dental treatment background" class="w-100"
+        style="height: 150px; object-fit: cover;">
+    <div class="overlay position-absolute top-0 start-0 w-100 h-100"
+        style="background: linear-gradient(90deg, #0088cc 0%, rgba(0,136,204,0.5) 100%);">
+    </div>
+    <div class="position-absolute start-0 bottom-0 p-4">
+        <h1 class="display-4 text-white fw-bold mb-0" style="color: #f8f9fa;">Productos</h1>
+    </div>
+</div>
+
+<!-- Products Grid -->
+<div class="productos-grid">
+    <div class="container pb-5">
+        <div class="row g-4">
+            <!-- Product Card 1 -->
+
+            <div class="col-md-6">
+                <div class="card border-0 rounded-4 shadow h-100">
+                    <div class="card-body p-4">
+                        <div class="row">
+                            <div class="col-5">
+                                <img src="{}" alt="Cadena de Poder" class="img-fluid mb-3 mb-md-0"
+                                    style="max-height: 150px; object-fit: contain;">
+                            </div>
+                            <div class="col-7">
+                                <h3 class="h5 mb-3">Cadena de Poder</h3>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button
+                                        class="btn btn-light rounded-pill d-flex align-items-center gap-2 py-1 px-3">
+                                        <i class="bi bi-plus"></i>
+                                        Carrito
+                                        <i class="bi bi-cart"></i>
+                                    </button>
+                                    <span class="price fw-bold h5 mb-0">S/ 15.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="col-md-6">
+                <div class="card border-0 rounded-4 shadow h-100">
+                    <div class="card-body p-4">
+                        <div class="row">
+                            <div class="col-5">
+                                <img src="/placeholder.svg" alt="Brackets Ortodónticos" class="img-fluid mb-3 mb-md-0"
+                                    style="max-height: 150px; object-fit: contain;">
+                            </div>
+                            <div class="col-7">
+                                <p class="text-purple mb-1 small">Brackets</p>
+                                <h3 class="h5 mb-3">Brackets Ortodónticos - ...</h3>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button
+                                        class="btn btn-light rounded-pill d-flex align-items-center gap-2 py-1 px-3">
+                                        <i class="bi bi-plus"></i>
+                                        Carrito
+                                        <i class="bi bi-cart"></i>
+                                    </button>
+                                    <span class="price fw-bold h5 mb-0" style="color: #000080;">S/ 13.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+   
+
+
+    <!-- Products Grid Section -->
+    {% if productos %}
+    <div class="container">
+        <div class="row g-4">
+            <!-- Product 1 -->
+            {% for producto in productos %}
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 rounded-4 shadow position-relative">
+                        <button class="btn position-absolute top-0 end-0 m-3 p-0">
+                            <i class="bi bi-heart-fill" style="color: #0088cc; font-size: 1.5rem;"></i>
+                        </button>
+                        <div class="card-body p-4">
+                            <img src="{{ producto.imagen_producto.url }}" alt="Retractor Lateral" class="img-fluid mb-3">
+                            <h5 class="product-title h6 mb-3">{{producto.nombre}}</h5>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="{% url 'carro:agregar' producto.id %}">
+                                    <button class="btn btn-light rounded-pill d-flex align-items-center gap-2 py-1 px-3">
+                                        <i class="bi bi-plus"></i>
+                                        Carrito
+                                        <i class="bi bi-cart"></i>
+                                    </button>
+                                </a>
+                                <span class="price fw-bold" style="color: #0088cc;">{{producto.precio}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% else %}
+    <h1>Resulltados de la busqueda</h1>
+    <h2>No se encontro productos</h2>
+    {% endif %}
+</div>
+
+{% endblock %}

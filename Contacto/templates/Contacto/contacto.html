@@ -1,0 +1,89 @@
+{% extends "Inicio/base.html" %}
+
+{% load static %}
+
+{% block content%}
+<!-- Banner -->
+<div class="banner position-relative mb-5">
+    <img src="{% static 'inicio/img/porta_preview_rev_1.png' %}" alt="Dental treatment background" class="w-100"
+        style="height: 150px; object-fit: cover;">
+    <div class="overlay position-absolute top-0 start-0 w-100 h-100"
+        style="background: linear-gradient(90deg, #0088cc 0%, rgba(0,136,204,0.5) 100%);">
+    </div>
+    <div class="position-absolute start-0 bottom-0 p-4">
+        <h1 class="display-4 text-white fw-bold mb-0" style="color: #f8f9fa;">Contáctanos</h1>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<section class="contact-section py-5" style="background-color: #e8f6f9;">
+    <div class="container">
+        <!-- Contact Info Cards -->
+        <div class="row text-center mb-5">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <div class="d-flex flex-column align-items-center">
+                    <i class="bi bi-geo-alt fs-1 mb-3" style="color: #00b3fe;"></i>
+                    <h5 class="mb-2">Ubicanos</h5>
+                    <p class="text-muted mb-0">-</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-0">
+                <div class="d-flex flex-column align-items-center">
+                    <i class="bi bi-envelope fs-1 mb-3" style="color: #00b3fe;"></i>
+                    <h5 class="mb-2">Correo electrónico</h5>
+                    <a href="mailto:info@clickdental.com.pe"
+                        class="text-muted text-decoration-none">info@denticare.com.pe</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex flex-column align-items-center">
+                    <i class="bi bi-telephone fs-1 mb-3" style="color: #00b3fe;"></i>
+                    <h5 class="mb-2">Celular</h5>
+                    <p class="text-muted mb-0">999 613 131 / 947 345 935</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8">
+                <h2 class="text-center mb-4">Envíanos tus consultas</h2>
+
+                <form method="POST"> 
+                    {% csrf_token %}
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control form-control-lg border-0 rounded-3"
+                                placeholder="Nombres" name="txtnombre" style="background-color: rgba(255, 255, 255, 0.9);" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control form-control-lg border-0 rounded-3"
+                                placeholder="Apellidos" name="txtapellido" style="background-color: rgba(255, 255, 255, 0.9);" required>
+                        </div>
+                    </div>
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <input type="tel" class="form-control form-control-lg border-0 rounded-3"
+                                placeholder="Celular" name="txtcelular" style="background-color: rgba(255, 255, 255, 0.9);" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" class="form-control form-control-lg border-0 rounded-3"
+                                placeholder="Correo electrónico" name="txteamil" style="background-color: rgba(255, 255, 255, 0.9);" required>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <textarea class="form-control form-control-lg border-0 rounded-3" rows="6" placeholder="Mensaje"
+                           name="txtmensaje" style="background-color: rgba(255, 255, 255, 0.9);" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-lg px-5 rounded-3">
+                            Enviar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,81 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Hola, {{nombreusuario}} <br>
+    N° de pedido: {{pedido.id}} <br>
+    Email del usuario:{{emailusuario}} <br>
+    Lineas de pedido: {{lineas_pedido}}
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background-color: #00a0e6;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .field {
+            margin-bottom: 10px;
+        }
+
+        .label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Nuevo pedido de DentiCare </h2>
+        </div>
+        <div class="content">
+            <div class="field">
+                <span class="label">Nombre:</span> {{nombreusuario}}
+            </div>
+            <div class="field">
+                <span class="label">N° de pedido: </span> {{pedido.id}}
+            </div>
+            <div class="field">
+                <span class="label">Email:</span> {{emailusuario}}
+            </div>
+            <div class="field">
+                <span class="label">Lineas de pedido</span>
+                {% for linea in lineas_pedido %}
+                    <p>{{ linea }}</p>
+                {% endfor %}
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+{% extends "Inicio/base.html" %}
+
+{% load static %}
+
+
+{% block content%}
+<!--Información o detalles del producto-->
+<section class="product-detail py-5" style="background-color: #ecf0f1;">
+    <div class="container">
+        <div class="row">
+            <!-- Product Gallery -->
+            <div class="col-md-6">
+                <div class="d-flex gap-4">
+                    <!-- Main Image -->
+                    <div class="main-image position-relative">
+                        <img src="{{imagen.url}}" alt="Cadena de Poder"
+                            class="img-fluid rounded" style="max-width: 400px;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="col-md-6">
+                <div class="product-info">
+                    <!-- Product Title -->
+                    <h1 class="display-6 fw-bold mb-3">{{nombre}}</h1>
+
+                    <!-- Product Details -->
+                    <div class="mb-3">
+                        <p class="mb-1 text-muted">SKU: C10000</p>
+                        <p class="mb-3">Categoría: <a href="#" class="text-decoration-none">Elásticos</a>, <a href="#"
+                                class="text-decoration-none">Ortodoncia</a></p>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="mb-4">
+                        <span class="text-decoration-line-through text-muted me-2">S/ 20.00</span>
+                        <span class="fs-2 fw-bold" style="color: #7161ef;">S/ {{precio}}</span>
+                    </div>
+                    <!-- Add to Cart Button -->
+                    <button class="btn btn-primary mb-4 px-4 py-2" style="border-radius: 25px;">
+                        Añadir al Carrito
+                    </button>
+
+                    <!-- Product Specifications -->
+                    <div class="specifications">
+                        <div class="row mb-2">
+                            <div class="col-3 fw-bold">Marca:</div>
+                            <div class="col">DENRUM</div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-3 fw-bold">Presentación:</div>
+                            <div class="col">Rollo de 5mts</div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-3 fw-bold">Color:</div>
+                            <div class="col">
+                                AZUL OSCURO, BLANCO, CELESTE, LAVANDA, ROJO, ROSADO, VERDE, VERDE OSCURO
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Description -->
+                    <p class="text-muted">
+                        Ligaduras elásticas que se usan a menudo para cerrar los espacios entre los dientes durante los
+                        tratamientos de ortodoncia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
