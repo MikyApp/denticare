@@ -90,7 +90,7 @@ WSGI_APPLICATION = 'DentiCareWeb.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgresql://postgres:postgres@localhost/postgres',
+        default='postgresql://denticare_user:00Ff7lxGcORlMxsAU7WsI1CQgebhkUsF@dpg-cthbc6hu0jms7382h70g-a.oregon-postgres.render.com/denticare',
         conn_max_age=600
     )
 }
