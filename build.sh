@@ -16,4 +16,4 @@ DJANGO_SUPERUSER_USERNAME=${DJANGO_SUPERUSER_USERNAME:-"mike"}
 DJANGO_SUPERUSER_EMAIL=${DJANGO_SUPERUSER_EMAIL:-"miguelpaucar987@gmial.com"}
 DJANGO_SUPERUSER_PASSWORD=${DJANGO_SUPERUSER_PASSWORD:-"50sombrasdegrey"}
 
-python manage.py createsuperuser --noinput
+python manage.py createsuperuser --no-input
